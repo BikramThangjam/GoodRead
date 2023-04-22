@@ -1,0 +1,45 @@
+.add-review-btn{
+    text-decoration: none;
+    border-radius: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0 solid transparent;
+    width: 250px;
+    background-color: #1e1915;
+    color: #ccc;
+
+}
+.add-review-btn:hover{
+    background-color: #302a26;
+    color: white;
+}
+
+.button-large {
+    height: 3rem;
+    padding: 0 3.2rem;
+}
+
+.review-textarea{
+    border-radius: 10px;
+    width: 100%;
+    min-height:250px;
+    text-decoration: none;
+    outline: none;
+    padding: 25px;
+    margin-bottom: 10px;;
+}
+
+.add-review-div{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
