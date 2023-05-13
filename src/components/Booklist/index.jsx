@@ -6,7 +6,7 @@ const Booklist = ()=>{
             <h2 className="text-center mt-3 mb-4 display-4 font-weight-bold">All Books</h2>
             <div className="row">
                 {
-                    BookData.map(book => <Book data = {book}/>)
+                    BookData.map((bookItem, index) => <Book key={index} data = {bookItem}/>)
                 }
             </div>
         </div>

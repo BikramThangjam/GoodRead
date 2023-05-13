@@ -1,8 +1,9 @@
 import Reviews from "../Reviews";
+import { Link } from "react-router-dom";
 import "./BookDetail.css"
 
 const BookDetail = (props) => {
-    const {image, title, description} = props.data;
+    const {id, image, title, description} = props.data;
     return (
         <div className="container pt-4">
             <div className="row">
@@ -19,9 +20,9 @@ const BookDetail = (props) => {
                     <hr />
                     <div className="text-center p-4">
                         <h1 className="pb-4">What do you think?</h1>
-                        <a href="/AddReview" className="button Button-large">
+                        <Link to={`/AddReview/${id}`} className="button Button-large">
                                 Write a Review
-                        </a>
+                        </Link>
                     </div>                   
                 </div>
             </div>

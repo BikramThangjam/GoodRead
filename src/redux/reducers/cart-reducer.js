@@ -35,6 +35,29 @@ export const cartReducer = (state=initialState, {type, payload}) => {
                 ...state,
                 numberCart: state.numberCart + 1,
             }
+        
+        case ActionTypes.INCREASE_QUANTITY:
+            state.carts.map((item,index)=>{
+                if(item.id === payload.id){
+                    state.carts[index].quantity++;
+                }
+            });
+            return {...state}
+
+        case ActionTypes.DECREASE_QUANTITY:
+            //if item's quantity > 1, then decrement the quantity
+            //if item's quantity = 1, then remove the item from carts array
+            const cartIndex = state.carts.findIndex(item => item.id === payload.id)
+            if(state.carts[cartIndex].quantity > 1){
+                state.carts[cartIndex].quantity -= 1
+            }else if(state.carts[cartIndex].quantity === 1){
+                //Removing that item from carts
+                state.carts = state.carts.filter(item => item.id !== payload.id);
+                state.numberCart -= 1
+            }
+
+            return {...state}
+
         default:
             return state;
     }

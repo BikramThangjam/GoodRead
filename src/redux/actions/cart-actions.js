@@ -6,3 +6,17 @@ export const addToCart = (product) => {
         payload: product,
     };
 };
+
+export const increaseQuantity = (product) => {
+    return {
+        type: ActionTypes.INCREASE_QUANTITY,
+        payload: product,
+    }
+}
+
+export const decreaseQuantity = (product)=>{
+    return {
+        type: ActionTypes.DECREASE_QUANTITY,
+        payload: product,
+    }
+}

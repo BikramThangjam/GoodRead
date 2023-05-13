@@ -23,9 +23,9 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/cart" element={<CartPage />} />
-        
-        {/* <Route path="/books/:id" element={<BookDetailPage />} /> */}
+        <Route path="/cart" element={<CartPage />} />       
+        <Route path="/books/:id" element={<BookDetailPage />} />
+        <Route path="/AddReview/:id" element={<AddReviewPage />} />
 
       </Routes>
     </Router>
