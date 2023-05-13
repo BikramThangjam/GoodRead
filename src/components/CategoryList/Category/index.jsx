@@ -1,7 +1,7 @@
 import "./Category.css"
 
 const Category = (props)=>{
-    const {catId, catName, image} = props.data
+    const {catName, image} = props.data
     return (
         <div className="col-sm-3">
             <div className="card">

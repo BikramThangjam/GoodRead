@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import "../CartItems/cartStyle.css"
 import { increaseQuantity, decreaseQuantity } from '../../../redux/actions/cart-actions';
@@ -31,7 +31,7 @@ const CartItems = () => {
                         carts.map((item, index) => (
                             <tr key={ index }>
                                 <td>
-                                    <img className='img-thumbnail img_thumbnail' src={item.image} />
+                                    <img className='img-thumbnail img_thumbnail' src={item.image} alt="book-thumbnail" />
 
                                 </td>
                                 <td>
