@@ -12,7 +12,7 @@ const ProfilePage = () => {
                         <div className="col-md-3"></div>
                         <div className="col-md-6">
                             <div className="card card-shadow">
-                                <img src={bgImgURL} alt="Card image cap" className="card-img-top" />
+                                <img src={bgImgURL} alt="CartImageCap" className="card-img-top" />
                                 <div className="card-body text-center little-profile">
                                     <div className="pro-img">
                                         <img src={profilePicURL} alt="user" />
@@ -21,9 +21,9 @@ const ProfilePage = () => {
                                     <p className="font-weight-bold">Fullstack Developer</p>
                                     <p className="font-weight-bold">GOwen@gmail.com</p>
                                     <div className="w-75 mx-auto my-auto">
-                                        <a href="#" class="btn btn-dark btn-block">Update Profile</a>
-                                        <a href="#" class="btn btn-dark btn-block">Change Password</a>
-                                        <a href="#" class="btn btn-dark btn-block">Logout</a>
+                                        <button class="btn btn-dark btn-block">Update Profile</button>
+                                        <button class="btn btn-dark btn-block">Change Password</button>
+                                        <button class="btn btn-dark btn-block">Logout</button>
                                     </div>
                                 </div>
                             </div>
