@@ -14,7 +14,7 @@
 
 .cart-btn{
    position: relative;
-   padding-right: 10px;
+   margin-right: 20px;
 }
 
 .cart-badge{
@@ -24,4 +24,8 @@
 }
 .cart-icon{
     color: white;
+}
+
+.profile-icon{
+    margin-right: 20px;
 }

@@ -9,9 +9,6 @@ const AddReview = (props) => {
             <img src={image} alt="" className="card-img-top w-100 h-100" />
             <div className="card-body">
               <h5 className="card-title text-center">{title}</h5>
-              <button className="btn btn-dark btn-block">
-                Add to cart
-              </button>
             </div>
           </div>
         </div>
