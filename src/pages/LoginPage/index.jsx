@@ -24,7 +24,7 @@ const LoginPage = ({setLoggedIn}) => {
                 //console.log(response);
                 localStorage.setItem("token", response.data.token)
                 setResponseData({
-                    responseText: "Login success, thank you.",
+                    responseText: "Login successful. Redirecting, please wait...",
                     responseClass: "alert alert-success"
                 });
                 

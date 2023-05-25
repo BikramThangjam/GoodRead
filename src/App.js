@@ -28,7 +28,7 @@ function App() {
             <Route path="/contact" element={<ProtectedRoute Component={ContactPage} />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage setLoggedIn={setLoggedIn}/>} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile" element={<ProfilePage setLoggedIn={setLoggedIn}/>} />
             <Route path="/cart" element={<CartPage />} />       
             <Route path="/books/:id" element={<BookDetailPage />} />
             <Route path="/AddReview/:id" element={<AddReviewPage />} />

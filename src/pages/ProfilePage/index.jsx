@@ -5,13 +5,15 @@ const bgImgURL = "https://images.pexels.com/photos/354939/pexels-photo-354939.jp
 const profilePicURL = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzNDU1OTE3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60";
 
 
-const ProfilePage = () => {
+const ProfilePage = ({setLoggedIn}) => {
 
     let navigate = useNavigate();
 
     const onLogoutHandler = () => {
         localStorage.removeItem("token");       
         navigate("/login")
+        setLoggedIn(false)
+        
     }
 
     return (
