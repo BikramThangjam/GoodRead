@@ -2,9 +2,12 @@ import React, {useState} from "react";
 import {useFormik} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterPage = () =>{
+
+    const navigate = useNavigate()
+
     const [responseData, setResponseData] = useState({
         responseText: "" ,
         responseClass: "",
@@ -18,7 +21,7 @@ const RegisterPage = () =>{
         password:''
         
     };
-    
+
     //submit form data
     const onSubmit = (values) =>{
        axios
@@ -26,9 +29,13 @@ const RegisterPage = () =>{
        .then(
             (response) => {
                 setResponseData({
-                    responseText: response.data.message,
+                    responseText: `${response.data.message}. Redirecting to login page...`,
                     responseClass: "alert alert-success"
-                })            
+                });
+                
+                setTimeout(()=>{
+                    navigate("/login")
+                },2000)
             },
             (error)=>{
                 // console.log(error);
