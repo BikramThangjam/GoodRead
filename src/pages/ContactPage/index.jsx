@@ -1,9 +1,6 @@
-import Navbar from "../../components/Navbar";
-
 const ContactPage = () => {
   return (
     <>
-      <Navbar />
       <div className="jumbatron text-center">
         <div className="display-4">Contact Us</div>
         <p className="lead">This is simple contact us page</p>

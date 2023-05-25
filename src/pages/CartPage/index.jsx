@@ -1,10 +1,9 @@
-import Navbar from "../../components/Navbar";
+
 import CartItems from "./CartItems";
 
 const CartPage = () => {
     return(
         <>
-            <Navbar />
             <br />
             <div className="container">
                 <div className="row">

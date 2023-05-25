@@ -1,13 +1,14 @@
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link, useNavigate} from "react-router-dom";
 import "./Navbar.css";
-const Navbar = () => {
-    const {numberCart} = useSelector((state)=>state)
 
+const Navbar = (props) => {
+    const {numberCart} = useSelector((state)=>state)
     const navigate = useNavigate();
-    const [loggedIn, setLoggedIn] = useState(false);
+    const {loggedIn, setLoggedIn} = props
+    
     useEffect(()=>{
         let token = localStorage.getItem("token");
         if(!token){

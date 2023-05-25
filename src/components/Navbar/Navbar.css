@@ -15,6 +15,7 @@
 .cart-btn{
    position: relative;
    margin-right: 20px;
+   padding-right: 10px;
 }
 
 .cart-badge{

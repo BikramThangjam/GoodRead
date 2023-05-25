@@ -2,10 +2,9 @@ import React, {useState} from 'react';
 import {Formik, Form,Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 import styles from "./style.module.css";
-import Navbar from '../../components/Navbar';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
-const LoginPage = () => {
+const LoginPage = ({setLoggedIn}) => {
     const [responseData, setResponseData] = useState({
         responseText: "" ,
         responseClass: "",
@@ -22,16 +21,20 @@ const LoginPage = () => {
         axios
         .post("https://orca-app-jhg4l.ondigitalocean.app/api/auth/login",values)
         .then((response)=>{
-                console.log(response);
+                //console.log(response);
                 localStorage.setItem("token", response.data.token)
                 setResponseData({
                     responseText: "Login success, thank you.",
                     responseClass: "alert alert-success"
                 });
-                navigate("/");
+                
+                setTimeout(()=>{
+                    navigate("/");
+                    setLoggedIn(true);
+                },2000)
             },
             (error)=>{
-                console.log(error);
+               // console.log(error);
                 setResponseData({
                     responseText: error.response.data.message,
                     responseClass: "alert alert-danger"
@@ -49,7 +52,6 @@ const LoginPage = () => {
     })
     return (
         <>
-            <Navbar />
             <div className="container">
                 <div className="row">
                     <div className="col-md-3"></div>

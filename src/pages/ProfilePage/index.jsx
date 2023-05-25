@@ -1,4 +1,4 @@
-import Navbar from "../../components/Navbar";
+
 import { useNavigate, Link} from "react-router-dom";
 import "./ProfilePage.css"
 const bgImgURL = "https://images.pexels.com/photos/354939/pexels-photo-354939.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -16,7 +16,6 @@ const ProfilePage = () => {
 
     return (
         <>
-            <Navbar />
             <div className="container">
                 <div className="padding">
                     <div className="row">

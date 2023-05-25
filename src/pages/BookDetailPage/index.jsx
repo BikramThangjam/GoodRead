@@ -1,5 +1,4 @@
 import BookDetail from "../../components/BookDetail"
-import Navbar from "../../components/Navbar"
 import { useParams } from "react-router-dom"
 import BookData from "../../data/book";
 
@@ -28,7 +27,6 @@ const BookDetailPage = () => {
    
     return (
         <>
-            <Navbar/>
             <BookDetail key={book.id} data = {book}/>
         </>
         

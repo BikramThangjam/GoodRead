@@ -1,9 +1,9 @@
-import Navbar from "../../components/Navbar"
+
 
 const AboutPage = () => {
     return (
         <>
-            <Navbar />
+            
             <div className="jumbatron text-center">
                 <div className="display-4">About Us</div>
                 <p className="lead">This is simple about us page</p>

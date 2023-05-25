@@ -1,5 +1,4 @@
 import AddReview from "../../components/AddReview";
-import Navbar from "../../components/Navbar"
 import { useParams } from "react-router-dom";
 import BookData from "../../data/book";
 
@@ -28,7 +27,6 @@ const AddReviewPage = () => {
 
     return (
         <div>
-            <Navbar/>
             <AddReview data = {book}/>
         </div>
     )

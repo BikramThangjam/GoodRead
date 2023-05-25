@@ -1,39 +1,8 @@
 import React, {useState} from "react";
 import {useFormik} from "formik";
 import * as Yup from "yup";
-import Navbar from "../../components/Navbar";
 import axios from "axios";
-
-// Below code is replaced by axios under onSubmit function
-// fetch("https://orca-app-jhg4l.ondigitalocean.app/api/auth/register",
-// {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify(values),
-// })
-// .then((response)=>{
-//     // console.log(response);
-//     if (response.status === 201){
-//         return response.json();
-//     }else {
-//         throw new Error(response.statusText);
-//     }
-// })
-// .then((json)=>{
-//     setResponseData({
-//         responseText: "Registration successfull" ,
-//         responseClass: "alert alert-success",
-//     });
-// })
-// .catch((error)=>{
-//     console.log("Error: ", error)
-//     setResponseData({
-//         responseText: "Registration failed. Please try again.",
-//         responseClass: "alert alert-danger",
-//     })
-// })
+import { Link } from "react-router-dom";
 
 const RegisterPage = () =>{
     const [responseData, setResponseData] = useState({
@@ -49,6 +18,7 @@ const RegisterPage = () =>{
         password:''
         
     };
+    
     //submit form data
     const onSubmit = (values) =>{
        axios
@@ -96,7 +66,6 @@ const RegisterPage = () =>{
 
     return (
         <>
-            <Navbar/>
             <div className="container">
                 <div className="row">
                     <div className="col-md-3"></div>
@@ -203,7 +172,7 @@ const RegisterPage = () =>{
                             </form>
                             <br />
                             <p className="text-center">
-                                Already have an account? <a href="/login">Login</a>
+                                Already have an account? <Link to="/login">Login</Link>
                             </p>
                         </div>
                     </div>
