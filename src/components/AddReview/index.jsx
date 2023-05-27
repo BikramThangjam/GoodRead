@@ -16,7 +16,6 @@ const AddReview = (props) => {
         </div>
         <div className="col-md-6 pt-4">
           <div className="rating">
-            <h3 className="mb-0">Rating: </h3>
             <StarRatings className="" rating={rating && rating} starEmptyColor="grey" starRatedColor="orange" numberOfStars={5} starDimension="25px" starSpacing="2px"/>
             <h4 className="mb-0">{rating}</h4>
           </div>

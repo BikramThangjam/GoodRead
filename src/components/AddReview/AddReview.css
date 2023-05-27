@@ -46,8 +46,13 @@
 
 .rating{
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 5px;
     margin-bottom: 1.3em;
 }
 
+.rating h4{
+    margin: 0px 10px;
+    font-weight: bold;
+}
