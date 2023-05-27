@@ -6,7 +6,7 @@ const AddReview = (props) => {
   return (
     <div className="container pt-4 mb-5">
       <div className="row">
-        <div className="col-md-6  ">
+        <div className="col-md-6 ">
           <div className="card box">
             <img src={image} alt="" className="card-img-top w-100 h-100" />
             <div className="card-body">
@@ -16,9 +16,9 @@ const AddReview = (props) => {
         </div>
         <div className="col-md-6 pt-4">
           <div className="rating">
-            <h3 className="">Rating: </h3>
-            <StarRatings className="" rating={rating && rating} starEmptyColor="grey" starRatedColor="orange" numberOfStars={5} starDimension="20px" starSpacing="2px"/>
-          
+            <h3 className="mb-0">Rating: </h3>
+            <StarRatings className="" rating={rating && rating} starEmptyColor="grey" starRatedColor="orange" numberOfStars={5} starDimension="25px" starSpacing="2px"/>
+            <h4 className="mb-0">{rating}</h4>
           </div>
           <div className="wrapper">
             <form action="">

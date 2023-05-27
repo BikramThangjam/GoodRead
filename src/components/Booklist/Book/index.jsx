@@ -1,3 +1,6 @@
+
+
+import "./Book.css";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { addToCart } from "../../../redux/actions/cart-actions";
@@ -12,8 +15,8 @@ const Book = (props) => {
         dispatch(addToCart(props.data));
     }
     return (
-        <div className="col-md-3 mb-4">
-            <div className="card">
+        <div className="col-md-3 col-sm-12 col-xs-12 mb-4">
+            <div className="card my-card mx-auto">
                 <Link to={`/books/${id}`}>
                     <img src={image} alt="" className="card-img-top"/>
                 </Link>              

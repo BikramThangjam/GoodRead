@@ -1,0 +1,13 @@
+
+.my-card{
+    max-width: 300px;
+    transition: .2s ease-in-out;
+}
+
+.my-card:hover{
+    transform: scale(1.05);
+}
+
+@media (max-width:768px){
+
+}
