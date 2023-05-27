@@ -1,6 +1,8 @@
 import "./AddReview.css";
+import StarRatings from "react-star-ratings";
+
 const AddReview = (props) => {
-   const {image, title} = props.data;
+   const {image, title, rating} = props.data;
   return (
     <div className="container pt-4 mb-5">
       <div className="row">
@@ -13,6 +15,11 @@ const AddReview = (props) => {
           </div>
         </div>
         <div className="col-md-6 pt-4">
+          <div className="rating">
+            <h3 className="">Rating: </h3>
+            <StarRatings className="" rating={rating && rating} starEmptyColor="grey" starRatedColor="orange" numberOfStars={5} starDimension="20px" starSpacing="2px"/>
+          
+          </div>
           <div className="wrapper">
             <form action="">
               <textarea
